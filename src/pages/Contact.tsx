@@ -12,9 +12,6 @@ import {
   Mail, 
   MapPin, 
   Clock, 
-  LinkedinIcon, 
-  Github, 
-  Phone,
   Send,
   MessageSquare,
   Globe
@@ -62,20 +59,6 @@ const Contact = () => {
       value: "ankit@pixelcraftstudio.pro",
       action: "mailto:ankit@pixelcraftstudio.pro",
       description: "Best for detailed project discussions"
-    },
-    {
-      icon: <LinkedinIcon className="h-6 w-6" />,
-      title: "LinkedIn",
-      value: "Connect with us",
-      action: "https://linkedin.com/company/pixelcraftstudio",
-      description: "Professional networking and updates"
-    },
-    {
-      icon: <Github className="h-6 w-6" />,
-      title: "GitHub",
-      value: "View our code",
-      action: "https://github.com/pixelcraftstudio",
-      description: "Check out our open source work"
     }
   ];
 
@@ -129,119 +112,50 @@ const Contact = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-3 gap-12">
-          {/* Contact Form */}
+          {/* Contact Information Only */}
           <div className="lg:col-span-2">
             <Card className="shadow-card">
               <CardHeader>
-                <CardTitle className="text-2xl">Start Your Project</CardTitle>
+                <CardTitle className="text-2xl">Let's Connect</CardTitle>
                 <p className="text-muted-foreground">
-                  Fill out the form below and I'll get back to you with a detailed proposal.
+                  Ready to discuss your project? Reach out via email for detailed project discussions.
                 </p>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4 p-6 rounded-lg bg-muted/30 border border-primary/20">
+                    <Mail className="h-8 w-8 text-primary" />
                     <div>
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => handleInputChange("name", e.target.value)}
-                        placeholder="Your full name"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="email">Email Address *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => handleInputChange("email", e.target.value)}
-                        placeholder="your.email@example.com"
-                        required
-                      />
+                      <h3 className="font-semibold text-lg">Email Address</h3>
+                      <a 
+                        href="mailto:ankit@pixelcraftstudio.pro" 
+                        className="text-primary hover:text-primary/80 transition-colors text-lg font-medium"
+                      >
+                        ankit@pixelcraftstudio.pro
+                      </a>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        Best for detailed project discussions and inquiries
+                      </p>
                     </div>
                   </div>
-
-                  <div>
-                    <Label htmlFor="company">Company/Business Name</Label>
-                    <Input
-                      id="company"
-                      value={formData.company}
-                      onChange={(e) => handleInputChange("company", e.target.value)}
-                      placeholder="Your business name (optional)"
-                    />
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <Label htmlFor="service">Service Needed *</Label>
-                      <Select onValueChange={(value) => handleInputChange("service", value)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select a service" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="website">Website Development</SelectItem>
-                          <SelectItem value="scraping">Data Scraping</SelectItem>
-                          <SelectItem value="api">API Integration</SelectItem>
-                          <SelectItem value="maintenance">Website Maintenance</SelectItem>
-                          <SelectItem value="consultation">Just Consultation</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
+                  
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/20">
+                      <Clock className="h-6 w-6 text-primary" />
+                      <div>
+                        <div className="font-medium">Response Time</div>
+                        <div className="text-sm text-muted-foreground">24-48 hours</div>
+                      </div>
                     </div>
-                    <div>
-                      <Label htmlFor="budget">Budget Range</Label>
-                      <Select onValueChange={(value) => handleInputChange("budget", value)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select budget range" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="under-300">Under $300</SelectItem>
-                          <SelectItem value="300-600">$300 - $600</SelectItem>
-                          <SelectItem value="600-1000">$600 - $1,000</SelectItem>
-                          <SelectItem value="1000-2000">$1,000 - $2,000</SelectItem>
-                          <SelectItem value="2000-plus">$2,000+</SelectItem>
-                          <SelectItem value="discuss">Let's discuss</SelectItem>
-                        </SelectContent>
-                      </Select>
+                    <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/20">
+                      <Globe className="h-6 w-6 text-primary" />
+                      <div>
+                        <div className="font-medium">Remote Work</div>
+                        <div className="text-sm text-muted-foreground">Global availability</div>
+                      </div>
                     </div>
                   </div>
-
-                  <div>
-                    <Label htmlFor="timeline">Project Timeline</Label>
-                    <Select onValueChange={(value) => handleInputChange("timeline", value)}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="When do you need this completed?" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="asap">ASAP (Rush delivery)</SelectItem>
-                        <SelectItem value="1-2weeks">1-2 weeks</SelectItem>
-                        <SelectItem value="1month">Within 1 month</SelectItem>
-                        <SelectItem value="2-3months">2-3 months</SelectItem>
-                        <SelectItem value="flexible">I'm flexible</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="message">Project Details *</Label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => handleInputChange("message", e.target.value)}
-                      placeholder="Tell me about your project, goals, specific requirements, and any questions you have..."
-                      rows={5}
-                      required
-                    />
-                  </div>
-
-                  <Button type="submit" size="lg" className="w-full">
-                    <Send className="h-5 w-5 mr-2" />
-                    Send Project Inquiry
-                  </Button>
-                </form>
+                </div>
               </CardContent>
             </Card>
           </div>
