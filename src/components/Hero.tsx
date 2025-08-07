@@ -60,13 +60,6 @@ const Hero = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button 
-                asChild 
-                size="lg"
-                className="btn-secondary text-lg px-8 py-6"
-              >
-                <Link to="/projects">View Our Work</Link>
-              </Button>
             </div>
 
             {/* Stats */}

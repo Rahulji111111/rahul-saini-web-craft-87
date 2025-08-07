@@ -116,7 +116,7 @@ const Home = () => {
           </div>
 
           <div className="text-center">
-            <Button asChild size="lg" className="bg-accent-gradient text-primary hover:shadow-hover">
+            <Button asChild size="lg" variant="premium">
               <Link to="/services">
                 Explore All Services
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -150,9 +150,10 @@ const Home = () => {
             <Button 
               asChild 
               size="lg"
-              className="btn-secondary font-semibold"
+              variant="secondary"
+              className="font-semibold"
             >
-              <Link to="/projects">View Portfolio</Link>
+              <Link to="/services">View Services</Link>
             </Button>
           </div>
         </div>
