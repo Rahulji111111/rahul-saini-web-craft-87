@@ -67,10 +67,6 @@ const About = () => {
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-white/80">
-                  <MapPin className="h-5 w-5" />
-                  <span>Pune, Maharashtra, India</span>
-                </div>
-                <div className="flex items-center gap-2 text-white/80">
                   <Briefcase className="h-5 w-5" />
                   <span>Full Stack Developer</span>
                 </div>
@@ -185,14 +181,6 @@ const About = () => {
               className="bg-white text-primary hover:bg-white/90"
             >
               <Link to="/contact">Get In Touch</Link>
-            </Button>
-            <Button 
-              asChild 
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-primary"
-            >
-              <Link to="/projects">View My Work</Link>
             </Button>
           </div>
         </div>

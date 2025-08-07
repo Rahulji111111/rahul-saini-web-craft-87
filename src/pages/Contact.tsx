@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ResumeDownload from "@/components/ResumeDownload";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -222,8 +222,6 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Resume Download */}
-            <ResumeDownload />
           </div>
         </div>
 

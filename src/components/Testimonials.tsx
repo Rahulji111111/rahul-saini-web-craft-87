@@ -4,23 +4,23 @@ import { Star, Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "PixelCraft Studio Client",
       company: "Local Bakery Owner",
-      content: "Rahul transformed our small bakery's online presence. The website is beautiful and has helped us reach so many new customers. Professional work at an incredible value.",
+      content: "PixelCraft Studio transformed our small bakery's online presence. The website is beautiful and has helped us reach so many new customers. Professional work at an incredible value.",
       rating: 5,
       image: "/placeholder.svg"
     },
     {
-      name: "Mike Chen",
+      name: "PixelCraft Studio Client",
       company: "Marketing Consultant",
-      content: "The data scraping solution Rahul built saves me 20 hours per week. His attention to detail and quick turnaround made this project a huge success.",
+      content: "The data scraping solution PixelCraft Studio built saves me 20 hours per week. Their attention to detail and quick turnaround made this project a huge success.",
       rating: 5,
       image: "/placeholder.svg"
     },
     {
-      name: "Lisa Rodriguez",
+      name: "PixelCraft Studio Client",
       company: "Real Estate Agent",
-      content: "Working with Rahul was a pleasure. He understood our needs perfectly and delivered a modern, responsive website that showcases our properties beautifully.",
+      content: "Working with PixelCraft Studio was a pleasure. They understood our needs perfectly and delivered a modern, responsive website that showcases our properties beautifully.",
       rating: 5,
       image: "/placeholder.svg"
     }
