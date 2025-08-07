@@ -75,7 +75,8 @@ export default {
 				'hero-gradient': 'var(--hero-gradient)',
 				'card-gradient': 'var(--card-gradient)',
 				'text-gradient': 'var(--text-gradient)',
-				'accent-gradient': 'var(--accent-gradient)'
+				'accent-gradient': 'var(--accent-gradient)',
+				'cta-gradient': 'var(--cta-gradient)'
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
